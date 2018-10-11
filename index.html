@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="Limbo">
+
+<head>
+
+    <base href="/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title ng-bind="page.title + ' - Limbo'"></title>
+
+    <link rel="stylesheet" href="/Content/site.min.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" ng-controller="NavbarController as navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" ng-click="navbar.collapse()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">Limbo</a>
+            <div class="collapse navbar-collapse" ng-class="{'show': navbar.isCollapsed}">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" ng-repeat="route in navbar.routes.main" ng-class="{'active': navbar.isActive(route), 'nav-border': navbar.isCollapsed}">
+                        <a ng-href="{{route.path}}" class="nav-link" ng-bind="route.title" ng-click="navbar.collapse(route)"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <ng-view autoscroll="true"></ng-view>
+    </div>
+
+    <script src="Scripts/site.min.js"></script>
+
+</body>
+
+</html>

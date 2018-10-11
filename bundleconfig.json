@@ -1,0 +1,46 @@
+[ /* Development */
+  {
+    "outputFileName": "Scripts/site.js",
+    "inputFiles": [
+      "Scripts/angular.js",
+      "Scripts/angular-route.js",
+      "App/App.Module.js",
+      "App/App.Config.js",
+      "App/App.Run.js",
+      "App/Controllers/*.js",
+      "App/Controllers/**/*.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "commentMode": "all"
+    }
+  },
+  /* Production */
+  {
+    "outputFileName": "Content/site.min.css",
+    "inputFiles": [
+      "Content/bootstrap.min.css",
+      "Content/site.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "none"
+    }
+  },
+  {
+    "outputFileName": "Scripts/site.min.js",
+    "inputFiles": [
+      "Scripts/angular.js",
+      "Scripts/angular-route.js",
+      "App/App.Module.js",
+      "App/App.Config.js",
+      "App/App.Run.js",
+      "App/Controllers/*.js",
+      "App/Controllers/**/*.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "none"
+    }
+  }
+]
