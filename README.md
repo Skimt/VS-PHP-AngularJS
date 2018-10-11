@@ -1,2 +1,2 @@
 # VS-PHP-AngularJS
-A PHP project with AngularJS written in Visual Studio Community 2017 to avoid chaos such as Node.js, Webpack, Gulp, etc.
+VS-PHP-AngularJS is a PHP + AngularJS project put together in VSC2017 to avoid chaos such as Node.js, Webpack, Gulp, etc, by simply using Mads Kristensens BundlerMinifier extension. 
